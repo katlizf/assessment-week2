@@ -23,7 +23,7 @@
 
 const greetUser = (username) => `Welcome back, ${username}`
 
-// console.log(greetUser('Andrew'))
+console.log(greetUser('Andrew'))
 
 //////////////////PROBLEM 2////////////////////
 /* 
@@ -57,8 +57,8 @@ const canWeDeliver = (zipCode) => {
     }
 }
 
-// console.log(canWeDeliver(85205))
-// console.log(canWeDeliver(84606))
+console.log(canWeDeliver(85205))
+console.log(canWeDeliver(84606))
 
 
 /* 
@@ -86,8 +86,19 @@ const canWeDeliverTwo = (zipCode) => {
     }
 }
 
-// console.log(canWeDeliver(85205))
-// console.log(canWeDeliver(84606))
+console.log(canWeDeliver(85205))
+console.log(canWeDeliver(84606))
+
+// let canDeliver === false
+// deliveryAreaZipCodes.forEach(zip => {
+//     if(zip === zipCode) {
+//         canDeliver = true
+//     }
+// }) if (canDeliver) {
+//     return "You're in our delivery zone"
+// } else {
+//     return"Sorry, we can't deliver to that address"
+// }
 
 //////////////////PROBLEM 3////////////////////
 /* 
@@ -109,7 +120,7 @@ const deals = [
     }, 
     {
         title: 'Free Kids Meal with 2 Regular Entrees', 
-        desc: '   This deal lasts until the end of March! '
+        desc: ' This deal lasts until the end of March! '
     }
 ]
 
@@ -122,9 +133,11 @@ const deals = [
     to replace the 15 with a 10.
 */
 
-deals.replace(title('15% off!', '10% off!'))
+// deals.replace(deals['title']['10%'])
+// console.log(deals.title)
 
-// console.log(deals)
+deals[0].title = deals[0].title.replace('15', '10')
+console.log(deals[0].title)
 
 /*
     The restaurant is going to continue its
@@ -139,4 +152,5 @@ deals.replace(title('15% off!', '10% off!'))
     to be displaying wrong on the live site.
 */
 
-//CODE HERE
+deals[1].desc = deals[1].desc.replace('March', 'April').trim()
+console.log(deals[1].desc)
